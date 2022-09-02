@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(123, 163, 96);
+    padding: 20px;
+}
+
+.fundo{
+    background-color: white;
+    height: 90vh;
+    border-radius: 5px;
+    padding: 20px;
+    overflow: auto;
+}
+
+.menu{
+    height: 100px;
+    background-color: rgb(123, 163, 96);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.botao-menu{
+    width: 90px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.botao-menu img{
+    width: 50px;
+}
+
+.botao-menu:hover{
+    transform:scale(1.1);
+}
+
+.lista{
+    margin-top: 10px;
+}
+
+.botao-registros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
