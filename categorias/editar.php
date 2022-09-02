@@ -45,10 +45,11 @@
         <div class="container">
             <fieldset>
                 <legend>Editar Categoria</legend>
-                <form method= 'POST'>
+                <form method= 'POST' action="salvar.php">
                     <label>Nome</label>
                     <input type="text" class="form-control" name="nome" value="<?php echo $categoria['nome'] ?>">
                     </br>
+                    <input type="hidden" name="id" value="<?php echo $id ?>">
                     <button type="submit" class="btn btn-success">Salvar</button>
                 </form>
             </fieldset>
