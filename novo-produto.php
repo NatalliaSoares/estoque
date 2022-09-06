@@ -57,6 +57,7 @@ if($sql->rowCount() > 0) {
                     <input type="text" class="form-control" name="nome" required>
                     <label>Categoria</label>
                     <select class="form-control" name="id_categoria" id="" required>
+                        <option value="" disabled selected>Selecione uma categoria</option>
                         <?php foreach ($categorias as $categoria): ?>
                             <option value="<?php echo $categoria['id'] ?>"><?php echo $categoria['nome'] ?></option>
                         <?php endforeach ?>
