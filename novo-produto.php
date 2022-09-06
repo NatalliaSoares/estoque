@@ -57,8 +57,9 @@ if($sql->rowCount() > 0) {
                     <input type="text" class="form-control" name="nome" required>
                     <label>Categoria</label>
                     <select class="form-control" name="id_categoria" id="" required>
-                        <option value="1">Test</option>
-                        <option value="2">Test2</option>
+                        <?php foreach ($categorias as $categoria): ?>
+                            <option value="<?php echo $categoria['id'] ?>"><?php echo $categoria['nome'] ?></option>
+                        <?php endforeach ?>
                     </select>
                     <label>Data de Validade</label>
                     <input type="date" class="form-control" name="data_validade">
