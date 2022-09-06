@@ -13,7 +13,7 @@ body{
 
 .menu{
     height: 100px;
-    background-color: rgb(123, 163, 96);
+    background-color: #7ba360;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -31,7 +31,7 @@ body{
 }
 
 .botao-menu img{
-    width: 50px;
+    width: 40px;
 }
 
 .botao-menu:hover{

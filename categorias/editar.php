@@ -51,6 +51,8 @@
                     </br>
                     <input type="hidden" name="id" value="<?php echo $id ?>">
                     <button type="submit" class="btn btn-success">Salvar</button>
+                    <a href="../nova-categoria.php" class="btn btn-warning">Voltar</a>
+
                 </form>
             </fieldset>
         </div>

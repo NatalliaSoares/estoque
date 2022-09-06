@@ -4,19 +4,29 @@ require_once "config.php";
 ?>
 
 <div class="menu">
-    <a href="<?php echo $url ?>novo-usuario.php">
+    <a href="<?php echo $url?>registros.php">
         <div class="botao-menu">    
-            <img src="<?php echo $url?>img/mais.png" alt="Cadastrar">
+                <img src="<?php echo $url?>img/lista.png" alt="Registros">
         </div>
     </a>
-    <a href="<?php echo $url ?>busca.php">
+    <a href="<?php echo $url ?>novo-usuario.php">
         <div class="botao-menu">    
-            <img src="<?php echo $url?>img/lupa.png" alt="Pesquisar">
+            <img src="<?php echo $url?>img/novo-usuario.png" alt="Cadastrar Usuário">
+        </div>
+    </a>
+    <a href="<?php echo $url?>novo-produto.php">
+        <div class="botao-menu">    
+                <img src="<?php echo $url?>img/novo-produto.png" alt="Registros">
         </div>
     </a>
     <a href="<?php echo $url ?>nova-categoria.php">
         <div class="botao-menu">    
-            <img src="<?php echo $url?>img/bolacha.png" alt="Categorias">
+            <img src="<?php echo $url?>img/nova-categoria.png" alt="Categorias">
         </div>
     </a>
+    <a href="<?php echo $url ?>busca.php">
+        <div class="botao-menu">    
+            <img src="<?php echo $url?>img/busca.png" alt="Pesquisar">
+        </div>
+    </a>    
 </div>

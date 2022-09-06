@@ -19,6 +19,16 @@ if (count($_POST) > 0){
         header("Location: index.php");
     }
 }
+
+$categorias = array();
+
+$sql = "SELECT * FROM categorias";
+$sql = $db->prepare($sql);
+$sql->execute();
+
+if($sql->rowCount() > 0) {
+    $categorias = $sql->fetchAll();
+}
 ?>
 
 
@@ -44,9 +54,12 @@ if (count($_POST) > 0){
                 <legend>Cadastrar Produto</legend>
                 <form method= 'POST'>
                     <label>Nome</label>
-                    <input type="text" class="form-control" name="nome">
+                    <input type="text" class="form-control" name="nome" required>
                     <label>Categoria</label>
-                    <input type="text" class="form-control" name="id_categoria">
+                    <select class="form-control" name="id_categoria" id="" required>
+                        <option value="1">Test</option>
+                        <option value="2">Test2</option>
+                    </select>
                     <label>Data de Validade</label>
                     <input type="date" class="form-control" name="data_validade">
                     <br/>
@@ -55,8 +68,6 @@ if (count($_POST) > 0){
                 </form>
             </fieldset>
         </div>
-    </section>
-    
-    
+    </section>    
 </body>
 </html>

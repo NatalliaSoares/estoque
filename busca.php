@@ -71,6 +71,7 @@ if(isset($_GET['campo_busca'])){
                     </tbody>
                 </table>
             </fieldset>
+            <a href="registros.php" class="btn btn-warning">Voltar</a>
         </div>
     </section>
 </body>

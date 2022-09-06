@@ -53,7 +53,7 @@ if (count($_POST) > 0){
                     <label>Senha</label>
                     <input type="password" class="form-control" name="senha">
                     <br/>
-                    <a href="index.php" class="btn btn-warning">Voltar</a>
+                    <a href="registros.php" class="btn btn-warning">Voltar</a>
                     <button type="submit" class="btn btn-success">Salvar</button>
                 </form>
             </fieldset>
