@@ -6,17 +6,18 @@ if (count($_POST) > 0){
     $nome = $_POST['nome'];
     $id_categoria = $_POST['id_categoria'];
     $data_validade = $_POST['data_validade'];
+    $qtd = $_POST['qtd'];
 
-    $sql = "INSERT INTO produtos SET nome = :nome, id_categoria = :id_categoria, data_validade = :data_validade";
+    $sql = "INSERT INTO produtos SET nome = :nome, id_categoria = :id_categoria, data_validade = :data_validade, qtd = :qtd";
     $sql = $db->prepare($sql);
     $sql->bindValue (":nome", $nome);
     $sql->bindValue (":id_categoria", $id_categoria);
     $sql->bindValue (":data_validade", $data_validade);
+    $sql->bindValue (":qtd", $qtd);
     $sql -> execute();
 
-   
     if($sql){
-        header("Location: index.php");
+        header("Location: produtos/listar.php");
     }
 }
 
@@ -60,10 +61,12 @@ if($sql->rowCount() > 0) {
                         <option value="" disabled selected>Selecione uma categoria</option>
                         <?php foreach ($categorias as $categoria): ?>
                             <option value="<?php echo $categoria['id'] ?>"><?php echo $categoria['nome'] ?></option>
-                        <?php endforeach ?>
+                        <?php endforeach ?> 
                     </select>
                     <label>Data de Validade</label>
                     <input type="date" class="form-control" name="data_validade">
+                    <label>Quantidade</label>
+                    <input type="text" class="form-control" name="qtd" required>
                     <br/>
                     <a href="index.php" class="btn btn-warning">Voltar</a>
                     <button type="submit" class="btn btn-success">Salvar</button>

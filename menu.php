@@ -19,6 +19,11 @@ require_once "config.php";
                 <img src="<?php echo $url?>img/novo-produto.png" alt="Registros">
         </div>
     </a>
+    <a href="<?php echo $url ?>produtos/listar.php">
+        <div class="botao-menu">    
+            <img src="<?php echo $url?>img/maca.png" alt="Pesquisar">
+        </div>
+    </a>  
     <a href="<?php echo $url ?>nova-categoria.php">
         <div class="botao-menu">    
             <img src="<?php echo $url?>img/nova-categoria.png" alt="Categorias">
