@@ -4,7 +4,7 @@
 
     $produtos = array();
 
-    $sql= "SELECT * FROM produtos";
+    $sql="SELECT produtos.id, produtos.nome, produtos.data_entrada, produtos.data_saida, produtos.data_validade, produtos.qtd, categorias.nome AS nome_categoria FROM produtos INNER JOIN categorias ON produtos.id_categoria = categorias.id";
     $sql = $db -> prepare($sql);
     $sql->execute();
 
@@ -48,7 +48,7 @@
                             <tr>
                                 <td><?php echo $produto['id'] ?></td>
                                 <td><?php echo $produto['nome'] ?></td>
-                                <td><?php echo $produto['id_categoria'] ?></td>
+                                <td><?php echo $produto['nome_categoria'] ?></td>
                                 <td><?php echo $produto['data_entrada'] ?></td>
                                 <td><?php echo $produto['data_saida'] ?></td>
                                 <td><?php echo $produto['data_validade'] ?></td>
